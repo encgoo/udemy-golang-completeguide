@@ -22,7 +22,7 @@ type itf2 {
     foo() string
 }
 type itf3 {
-    itf1,
+    itf1
     itf2
 }
 ```

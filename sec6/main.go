@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"io"
+	"os"
 )
 
 // an empty type with only receiver functions
@@ -61,6 +63,8 @@ func (m machineStrct) setInput(string) bool {
 }
 
 func main() {
+	assignment()
+
 	var eb englishBot
 	var sb spanishBot
 
@@ -76,4 +80,15 @@ func main() {
 	// compiler checks that machineStruct satisfies machInterface at this point
 	var machInf machInterface = mach1
 	fmt.Println(machInf.getGreeting())
+}
+
+func assignment() {
+	args := os.Args
+	// args[0] is the executable, args[1] is the first argument
+	fileName := args[1]
+	file, err := os.Open(fileName)
+	if err != nil {
+		panic(err)
+	}
+	io.Copy(os.Stdout, file)
 }
