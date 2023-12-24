@@ -1,0 +1,8 @@
+go 1.19
+
+use (
+	./cards
+	./sec4
+	./sec5
+	./sec6
+)
