@@ -131,3 +131,7 @@ for {
 }
 
 ```
+
+## Private vs Public
+* All identifiers defined within a package are visible throughout that package
+* Public identifiers are those visible to external packages.

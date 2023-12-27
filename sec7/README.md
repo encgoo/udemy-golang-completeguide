@@ -9,7 +9,7 @@ A channel is used to communicate between go routines. A channel is associated wi
 ### declaration
 Declare a chan like this:
 ```go
-    cStr := make(char string)
+    cStr := make(chan string)
     var cInt chan int
 ```
 ### Use
