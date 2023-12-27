@@ -26,6 +26,15 @@ Always use make
     c := make(chan string)
 ```
 
+## range for channel
+The following for loop will keep on going until the ch is closed. 
+```go
+    for i := range ch {
+
+    }
+```
+Channel shall be closed by the sender not the receiver.
+Channel shall not mix sender and receiver. A thread shall be only either the sender or receiver of a channel, not both.
 ## non-buffered channel
 For a single (non-buffered) channel, write and read must alternate. The read is waiting for the write before it can go on. More importantly, the write is also waiting for the read. This becomes tricky if the main routine use a channel to send information to a child routine. It has to spawn the child routine _first_ before writing. If it writes first, then it will hang there waiting for read before it can spawn a child rountine. This is a deadlock.
 
