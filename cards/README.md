@@ -122,3 +122,12 @@ Reference types include:
 * channel
 * interface
 * function type
+
+## while loop for ever
+Use for
+```go 
+for {
+
+}
+
+```
